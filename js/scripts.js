@@ -3,10 +3,19 @@ var roman = function(number) {
   var numeral5 = "V";
   var numeral10 = "X";
   var numeral50 = "L";
+  var numeral100 = "C";
   var outputArray = [];
   var remainder = number;
 
-  if (remainder / 50 > 1) {
+
+  if ((remainder / 100 < 1) && (remainder % 100 >= 90) && (remainder % 100 <= 99)) {
+      outputArray.push(numeral10, numeral100);
+      remainder -= 90;
+  }
+
+
+
+  if (remainder / 50 >= 1) {
     outputArray.push(numeral50);
     remainder -= 50;
   }
@@ -16,7 +25,7 @@ var roman = function(number) {
     remainder -=40;
   }
 
-  if (remainder / 10 > 1) {
+  if (remainder / 10 >= 1) {
     var tens = Math.floor(remainder / 10);
     for (var index = 1; index <= tens; index += 1) {
       outputArray.push(numeral10);
@@ -29,7 +38,7 @@ var roman = function(number) {
     remainder -= 10;
   }
 
-  if (remainder / 5 > 1) {
+  if (remainder / 5 >= 1) {
     outputArray.push(numeral5);
     remainder -= 5;
   }

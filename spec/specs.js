@@ -38,4 +38,8 @@ describe("roman", function() {
   it("takes the number 89 and converts it to a roman numeral", function() {
     expect(roman(89)).to.eql("LXXXIX");
   });
+
+  it("takes the number 95 and converts it to a roman numeral", function() {
+    expect(roman(95)).to.eql("XCV");
+  });
 });
