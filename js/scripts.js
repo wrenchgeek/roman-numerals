@@ -93,3 +93,15 @@ var roman = function(number) {
   var finalOutput = outputArray.join('');
   return finalOutput;
 }
+
+$(document).ready(function() {
+  $("form#numbers").submit(function(event) {
+    var number = parseInt($("input#number").val());
+    var numeral = roman(number);
+
+    $(".output").text(numeral);
+
+    $("result").show();
+    event.preventDefault();
+  });
+});
