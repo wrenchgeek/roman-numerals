@@ -4,6 +4,12 @@ var roman = function(number) {
   var outputArray = [];
   var remainder = number
 
+  if (remainder / 5 > 1) {
+    outputArray.push(numeral5);
+    remainder -= 5;
+
+  }
+
   if ((remainder / 5 < 1) && (remainder % 5 === 4)) {
     outputArray.push(numeral1, numeral5);
     remainder -=4

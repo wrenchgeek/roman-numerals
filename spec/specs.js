@@ -10,5 +10,8 @@ describe("roman", function() {
   it("takes the number 8 and converts it to a roman numeral", function() {
     expect(roman(8)).to.eql("VIII");
   });
+  it("takes the number 9 and converts it to a roman numeral", function() {
+    expect(roman(9)).to.eql("IX");
+  });
 
 });
