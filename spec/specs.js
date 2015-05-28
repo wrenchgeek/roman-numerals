@@ -42,4 +42,28 @@ describe("roman", function() {
   it("takes the number 95 and converts it to a roman numeral", function() {
     expect(roman(95)).to.eql("XCV");
   });
+
+  it("takes the number 376 and converts it to a roman numeral", function() {
+    expect(roman(376)).to.eql("CCCLXXVI");
+  });
+
+  it("takes the number 465 and converts it to a roman numeral", function() {
+    expect(roman(465)).to.eql("CDLXV");
+  });
+
+  it("takes the number 731 and converts it to a roman numeral", function() {
+    expect(roman(731)).to.eql("DCCXXXI");
+  });
+
+  it("takes the number 999 and converts it to a roman numeral", function() {
+    expect(roman(999)).to.eql("CMXCIX");
+  });
+
+  it("takes the number 3762 and converts it to a roman numeral", function() {
+    expect(roman(3762)).to.eql("MMMDCCLXII");
+  });
+
+  it("takes a number above 3999 and returns that Romans could not count that high", function() {
+    expect(roman(41242)).to.eql("Romans could not count that high");
+  });
 });
